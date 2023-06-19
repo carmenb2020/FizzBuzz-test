@@ -1,29 +1,33 @@
-const { createFizzBuzz } = require('./fizzbuzz');
+const { FizzBuzz } = require('./fizzbuzz');
 
-describe ("si el numero es multiplo de 3 y 5", () =>{
+describe ("prueba de función FizzBuzz", () =>{
+ 
+  test("Debe retornar Fizz", () =>{
+    const input = 9;
+    expect(FizzBuzz(input)).toBe('Fizz');
+  });
 
-test("debe ser fizz", () =>{
+  test("Debe retornar Buzz", () =>{
+    const input = 10;
+    expect(FizzBuzz(input)).toBe('Buzz');
+  });
 
-  expect(createFizzBuzz(9)).toBe('Fizz');
+  test("Debe retornar FizzBuzz", () => {
+    const input = 15;
+    expect(FizzBuzz(input)).toBe('FizzBuzz');
+  });
+
+  test("Debe retornar el número que se ingresó", () => {
+    const input = 23;
+    expect(FizzBuzz(input)).toBe(input);
+  });
+
+  test("Debe retornar: 'No es un número entero'", () => {
+    const input = "hola Mundo";
+    expect(FizzBuzz(input)).toBe("No es un número entero");
+  });
 
 });
-
-test("debe ser buzz", () =>{
-
-  expect(createFizzBuzz(10)).toBe('Buzz');
-});
-
-test("debe ser fizzbuzz", () => {
-
-  expect(createFizzBuzz(15)).toBe('FizzBuzz');
-});
-});
-
-test("debe ser un numero entero", () =>{
-
-  expect(createFizzBuzz("holaMundo")).toBe("No es un numero entero");
-})
-  
  
 
 

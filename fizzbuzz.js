@@ -1,8 +1,8 @@
-function createFizzBuzz(number) {
+function FizzBuzz(number) {
     
     if (Number.isInteger(number)) {
 
-        if (number % 3 === 0 && number % 5 === 0)
+        if ((number % 3 === 0) && (number % 5 === 0))
             return 'FizzBuzz';
         else if (number % 3 === 0)
             return 'Fizz';
@@ -10,11 +10,10 @@ function createFizzBuzz(number) {
             return 'Buzz';
         else
             return number;
-
-    } else {
-        
-        return 'No es un numero entero';
+        }
+        else {
+        return 'No es un número entero';
     }
 }
 
-module.exports = { createFizzBuzz };
+module.exports = { FizzBuzz };
