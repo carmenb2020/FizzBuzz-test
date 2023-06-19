@@ -1,2 +1,2 @@
 # FizzBuzz-test
-Creating a FizzBuzz  whith jest test
+Creating a FizzBuzz  with jest test
